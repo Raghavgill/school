@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - My School</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header, footer {
+      background: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #005099;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h2 {
+      color: #004a99;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 40px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My School</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Our School</h2>
+      <p>We are committed to providing quality education and nurturing young minds for a better future. Our school believes in a balance of academic excellence and character development, helping students grow into confident, responsible citizens.</p>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <p>To empower students with knowledge, creativity, and values to shape a better tomorrow through innovation, respect, and dedication.</p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>To become a leading institution known for educational excellence, inclusive values, and future-ready learners.</p>
+    </section>
+
+    <section>
+      <h2>Our Team</h2>
+      <p>We have a team of experienced educators, supportive staff, and visionary leaders who work together to foster a healthy and vibrant learning environment.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My School</p>
+  </footer>
+
+</body>
+</html>

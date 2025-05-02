@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>My School - Home</title>
+  <link rel="stylesheet" href="stylem.css" />
+</head>
+
+<body>
+  <header>
+    <h1>My School</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="main-content">
+      <section class="welcome">
+        <h2>Welcome to My School</h2>
+        <p>Empowering students for a better future.</p>
+      </section>
+
+      <section class="gallery">
+        <h2>Our School</h2>
+        <div class="gallery-container">
+          <img
+            src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sfGVufDB8fDB8fHww"
+            alt="School Image 1" />
+          <img src="https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs1j3smZnMNp6LPwnVygLHkPeo5iGynO3-xA&s"
+            alt="School Image 3" />
+        </div>
+      </section>
+
+      <section class="notices">
+        <h2>Latest Notices</h2>
+        <ul id="notice-list"></ul>
+      </section>
+
+      <section class="event-slider">
+        <h2>Upcoming Events</h2>
+        <div id="slider">
+          <div class="slide active">Science Exhibition - 10 May</div>
+          <div class="slide">Annual Day - 15 May</div>
+          <div class="slide">Parent Teacher Meeting - 20 May</div>
+        </div>
+      </section>
+    </section>
+
+    <aside class="sidebar-form">
+      <h2>Contact Us</h2>
+      <p style="color:blue;">We will get back to you within 24 hours</p>
+
+      <form id="contact-form" action="https://formspree.io/f/xrbqpekd" method="POST">
+
+        <label for="contact-name">Your Name:</label><br>
+        <input type="text" id="contact-name" name="name" required><br><br>
+
+        <label for="contact-email">Your Email:</label><br>
+        <input type="email" id="contact-email" name="email" required><br><br>
+
+        <label for="contact-subject">Subject:</label><br>
+        <input type="text" id="contact-subject" name="subject" required><br><br>
+
+        <label for="contact-message">Message:</label><br>
+        <textarea id="contact-message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <p id="contact-status" style="color: green;"></p>
+    </aside>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My School</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

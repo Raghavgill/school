@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Our School</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('images/Screenshot 2025-05-02 145343.ico') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-box {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 600px;
+      padding: 40px;
+      animation: slideIn 1s ease-out;
+      position: relative;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #ffde59;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from {
+        text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59;
+      }
+      to {
+        text-shadow: 0 0 20px #ffde59, 0 0 30px #ffde59;
+      }
+    }
+
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+      animation: popIn 1.2s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffde59;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 25px;
+      background: #f2f2f2;
+      border: 2px solid #ffde59;
+      border-radius: 10px;
+      color: #333;
+      font-size: 16px;
+      transition: all 0.4s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      background: #fff;
+      border-color: #ffde59;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #ffde59;
+      color: #333;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffb400;
+      transform: scale(1.05);
+    }
+
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: #ffde59;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    /* Success Popup */
+    .success-popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #2d7d7e;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      animation: fadePopup 0.4s ease;
+    }
+
+    .success-popup.show {
+      display: block;
+    }
+
+    @keyframes fadePopup {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .contact-box {
+        padding: 30px 20px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-box">
+    <img src="https://via.placeholder.com/80" alt="School Logo" class="logo">
+    <div class="emoji">🏫</div>
+    <h2>Contact Our School</h2>
+    <form id="contactForm" action="https://formspree.io/f/xrbqpekd" method="POST">
+      <label for="name">Student/Parent Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="class">Class/Grade</label>
+      <select id="class" name="class" required>
+        <option value="">Select Grade</option>
+        <option value="1st Grade">1st Grade</option>
+        <option value="2nd Grade">2nd Grade</option>
+        <option value="3rd Grade">3rd Grade</option>
+        <option value="4th Grade">4th Grade</option>
+        <option value="5th Grade">5th Grade</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Success Popup -->
+    <div class="success-popup" id="successPopup">
+      ✅ Thank you for contacting us! We'll get back to you shortly.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Simulate form sending
+      document.getElementById('successPopup').classList.add('show');
+      setTimeout(() => {
+        document.getElementById('successPopup').classList.remove('show');
+        document.getElementById('contactForm').reset();
+      }, 4000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+  /* Background and base styling */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    background-image:
+      url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=2000&q=80'),
+      url('https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg'),
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs1j3smZnMNp6LPwnVygLHkPeo5iGynO3-xA&s');
+    background-position: top center, center center, bottom center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, scroll, scroll;
+    background-size: cover;
+    scroll-behavior: smooth;
+  }
+
+  header, footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #005099;
+  }
+
+  .main-container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: fadeIn 2s ease-in;
+  }
+
+  .main-content {
+    flex: 2;
+    animation: slideInLeft 1.5s ease;
+  }
+
+  .sidebar-form {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    animation: slideInRight 1.5s ease;
+  }
+
+  .gallery-container img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-container img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .slide {
+    background: #dff0ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #0077cc;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 8px #0077cc;
+    outline: none;
+  }
+
+  button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #005099;
+    transform: scale(1.05);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
